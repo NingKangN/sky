@@ -1,0 +1,504 @@
+2019-08-26 14:44:04.072  INFO 3152 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 3152 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 14:44:04.072  INFO 3152 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 14:44:04.150  INFO 3152 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67c27493: startup date [Mon Aug 26 14:44:04 CST 2019]; root of context hierarchy
+2019-08-26 14:44:04.969  WARN 3152 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify]' package. Please check your configuration.
+2019-08-26 14:44:05.640  INFO 3152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 14:44:05.671  INFO 3152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 14:44:05.671  INFO 3152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 14:44:05.671  INFO 3152 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 14:44:05.765  INFO 3152 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 14:44:05.765  INFO 3152 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1615 ms
+2019-08-26 14:44:05.781  INFO 3152 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 14:44:05.796  INFO 3152 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 14:44:05.874  INFO 3152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 14:44:05.874  INFO 3152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 14:44:05.905  INFO 3152 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:44:05.905  INFO 3152 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:44:05.905  INFO 3152 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:44:05.952  INFO 3152 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67c27493: startup date [Mon Aug 26 14:44:04 CST 2019]; root of context hierarchy
+2019-08-26 14:44:06.030  WARN 3152 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine suitable jdbc url
+2019-08-26 14:44:06.046  INFO 3152 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-08-26 14:44:06.061  INFO 3152 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-26 14:44:06.077 ERROR 3152 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine suitable jdbc url
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-08-26 14:46:30.886  INFO 6032 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 6032 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 14:46:30.901  INFO 6032 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 14:46:30.979  INFO 6032 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@59662a0b: startup date [Mon Aug 26 14:46:30 CST 2019]; root of context hierarchy
+2019-08-26 14:46:31.744  WARN 6032 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify.mapper.**]' package. Please check your configuration.
+2019-08-26 14:46:32.555  INFO 6032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 14:46:32.570  INFO 6032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 14:46:32.570  INFO 6032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 14:46:32.586  INFO 6032 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 14:46:32.695  INFO 6032 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 14:46:32.695  INFO 6032 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1716 ms
+2019-08-26 14:46:32.711  INFO 6032 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 14:46:32.711  INFO 6032 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 14:46:32.820  INFO 6032 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 14:46:32.820  INFO 6032 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 14:46:32.851  INFO 6032 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:46:32.851  INFO 6032 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:46:32.851  INFO 6032 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:46:32.898  INFO 6032 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@59662a0b: startup date [Mon Aug 26 14:46:30 CST 2019]; root of context hierarchy
+2019-08-26 14:46:33.054  INFO 6032 --- [main] o.s.ui.freemarker.SpringTemplateLoader   : SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@59662a0b: startup date [Mon Aug 26 14:46:30 CST 2019]; root of context hierarchy] and template loader path [classpath:/templates/]
+2019-08-26 14:46:33.054  INFO 6032 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-08-26 14:46:33.101  WARN 6032 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-26 14:46:33.319  INFO 6032 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-08-26 14:46:33.382  INFO 6032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-08-26 14:46:33.382  INFO 6032 --- [main] com.js.ctc.qualify.QualifyApplication    : Started QualifyApplication in 3.134 seconds (JVM running for 4.447)
+2019-08-26 14:51:02.898  INFO 6084 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 6084 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 14:51:02.961  INFO 6084 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 14:51:03.054  INFO 6084 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 14:51:03 CST 2019]; root of context hierarchy
+2019-08-26 14:51:03.859  WARN 6084 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify.mapper.**]' package. Please check your configuration.
+2019-08-26 14:51:04.749  INFO 6084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 14:51:04.781  INFO 6084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 14:51:04.781  INFO 6084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 14:51:04.812  INFO 6084 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 14:51:04.927  INFO 6084 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 14:51:04.927  INFO 6084 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1873 ms
+2019-08-26 14:51:04.959  INFO 6084 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 14:51:04.959  INFO 6084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 14:51:05.068  INFO 6084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Demo/index]}" onto public java.lang.String com.js.ctc.qualify.controller.Demo.index()
+2019-08-26 14:51:05.083  INFO 6084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 14:51:05.083  INFO 6084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 14:51:05.115  INFO 6084 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:51:05.115  INFO 6084 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:51:05.115  INFO 6084 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:51:05.146  INFO 6084 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 14:51:03 CST 2019]; root of context hierarchy
+2019-08-26 14:51:05.333  INFO 6084 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-08-26 14:51:05.556  INFO 6084 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-08-26 14:51:05.588  INFO 6084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-08-26 14:51:05.603  INFO 6084 --- [main] com.js.ctc.qualify.QualifyApplication    : Started QualifyApplication in 3.251 seconds (JVM running for 4.544)
+2019-08-26 14:51:36.388  INFO 6084 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-26 14:51:36.388  INFO 6084 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-26 14:51:36.410  INFO 6084 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2019-08-26 14:51:36.506 ERROR 6084 --- [http-nio-8099-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Could not resolve view with name 'index.ftl' in servlet with name 'dispatcherServlet'] with root cause
+
+javax.servlet.ServletException: Could not resolve view with name 'index.ftl' in servlet with name 'dispatcherServlet'
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1305) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2019-08-26 14:51:36.620  WARN 6084 --- [http-nio-8099-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
+2019-08-26 14:51:59.317  INFO 1012 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 1012 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 14:51:59.317  INFO 1012 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 14:51:59.410  INFO 1012 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 14:51:59 CST 2019]; root of context hierarchy
+2019-08-26 14:52:00.081  WARN 1012 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify.mapper.**]' package. Please check your configuration.
+2019-08-26 14:52:00.908  INFO 1012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 14:52:00.924  INFO 1012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 14:52:00.924  INFO 1012 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 14:52:00.939  INFO 1012 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 14:52:01.033  INFO 1012 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 14:52:01.033  INFO 1012 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1623 ms
+2019-08-26 14:52:01.064  INFO 1012 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 14:52:01.064  INFO 1012 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 14:52:01.142  INFO 1012 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Demo/index]}" onto public java.lang.String com.js.ctc.qualify.controller.Demo.index()
+2019-08-26 14:52:01.158  INFO 1012 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 14:52:01.158  INFO 1012 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 14:52:01.189  INFO 1012 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:52:01.189  INFO 1012 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:52:01.189  INFO 1012 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:52:01.236  INFO 1012 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 14:51:59 CST 2019]; root of context hierarchy
+2019-08-26 14:52:01.407  INFO 1012 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-08-26 14:52:01.610  INFO 1012 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-08-26 14:52:01.657  INFO 1012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-08-26 14:52:01.657  INFO 1012 --- [main] com.js.ctc.qualify.QualifyApplication    : Started QualifyApplication in 3.089 seconds (JVM running for 4.307)
+2019-08-26 14:52:07.254  INFO 1012 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-26 14:52:07.255  INFO 1012 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-26 14:52:07.271  INFO 1012 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2019-08-26 14:54:19.838  INFO 6044 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 6044 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 14:54:19.870  INFO 6044 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 14:54:19.932  INFO 6044 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b8dfcc1: startup date [Mon Aug 26 14:54:19 CST 2019]; root of context hierarchy
+2019-08-26 14:54:20.728  WARN 6044 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify.mapper.**]' package. Please check your configuration.
+2019-08-26 14:54:20.868  WARN 6044 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify]' package. Please check your configuration.
+2019-08-26 14:54:21.898  INFO 6044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 14:54:21.913  INFO 6044 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 14:54:21.913  INFO 6044 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 14:54:21.929  INFO 6044 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 14:54:22.054  INFO 6044 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 14:54:22.054  INFO 6044 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2122 ms
+2019-08-26 14:54:22.085  INFO 6044 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 14:54:22.085  INFO 6044 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 14:54:22.194  INFO 6044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Demo/index]}" onto public java.lang.String com.js.ctc.qualify.controller.Demo.index()
+2019-08-26 14:54:22.194  INFO 6044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 14:54:22.194  INFO 6044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 14:54:22.241  INFO 6044 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:54:22.241  INFO 6044 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:54:22.241  INFO 6044 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 14:54:22.272  INFO 6044 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b8dfcc1: startup date [Mon Aug 26 14:54:19 CST 2019]; root of context hierarchy
+2019-08-26 14:54:22.646  INFO 6044 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-08-26 14:54:22.912  INFO 6044 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-08-26 14:54:22.912  INFO 6044 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-08-26 14:54:22.912  INFO 6044 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-08-26 14:54:23.130  INFO 6044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-08-26 14:54:23.130  INFO 6044 --- [main] com.js.ctc.qualify.QualifyApplication    : Started QualifyApplication in 3.822 seconds (JVM running for 5.469)
+2019-08-26 15:10:18.207  INFO 6512 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 6512 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 15:10:18.207  INFO 6512 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 15:10:18.269  INFO 6512 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:10:18 CST 2019]; root of context hierarchy
+2019-08-26 15:10:19.314  WARN 6512 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify.mapper.**]' package. Please check your configuration.
+2019-08-26 15:10:19.455  WARN 6512 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify]' package. Please check your configuration.
+2019-08-26 15:10:20.375  INFO 6512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 15:10:20.391  INFO 6512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 15:10:20.391  INFO 6512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 15:10:20.391  INFO 6512 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 15:10:20.500  INFO 6512 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 15:10:20.500  INFO 6512 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2231 ms
+2019-08-26 15:10:20.516  INFO 6512 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 15:10:20.531  INFO 6512 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 15:10:20.594  INFO 6512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Demo/index]}" onto public java.lang.String com.js.ctc.qualify.controller.Demo.index()
+2019-08-26 15:10:20.609  INFO 6512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 15:10:20.609  INFO 6512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 15:10:20.656  INFO 6512 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:10:20.656  INFO 6512 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:10:20.656  INFO 6512 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:10:20.719  INFO 6512 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:10:18 CST 2019]; root of context hierarchy
+2019-08-26 15:10:21.109  INFO 6512 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-08-26 15:10:21.343  INFO 6512 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-08-26 15:10:21.343  INFO 6512 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-08-26 15:10:21.343  INFO 6512 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-08-26 15:10:21.515  INFO 6512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-08-26 15:10:21.531  INFO 6512 --- [main] com.js.ctc.qualify.QualifyApplication    : Started QualifyApplication in 3.87 seconds (JVM running for 5.055)
+2019-08-26 15:10:35.154  INFO 6512 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-26 15:10:35.154  INFO 6512 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-26 15:10:35.168  INFO 6512 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2019-08-26 15:11:13.047  INFO 6056 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 6056 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 15:11:13.063  INFO 6056 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 15:11:13.125  INFO 6056 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:11:13 CST 2019]; root of context hierarchy
+2019-08-26 15:11:13.827  WARN 6056 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify.mapper.**]' package. Please check your configuration.
+2019-08-26 15:11:13.952  WARN 6056 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify]' package. Please check your configuration.
+2019-08-26 15:11:14.795  INFO 6056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 15:11:14.826  INFO 6056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 15:11:14.826  INFO 6056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 15:11:14.826  INFO 6056 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 15:11:14.919  INFO 6056 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 15:11:14.919  INFO 6056 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1794 ms
+2019-08-26 15:11:14.935  INFO 6056 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 15:11:14.951  INFO 6056 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 15:11:15.029  INFO 6056 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Demo/index]}" onto public java.lang.String com.js.ctc.qualify.controller.Demo.index()
+2019-08-26 15:11:15.029  INFO 6056 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 15:11:15.029  INFO 6056 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 15:11:15.060  INFO 6056 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:11:15.060  INFO 6056 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:11:15.060  INFO 6056 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:11:15.107  INFO 6056 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:11:13 CST 2019]; root of context hierarchy
+2019-08-26 15:11:15.450  INFO 6056 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-08-26 15:11:15.684  INFO 6056 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-08-26 15:11:15.684  INFO 6056 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-08-26 15:11:15.684  INFO 6056 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-08-26 15:11:15.855  INFO 6056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-08-26 15:11:15.871  INFO 6056 --- [main] com.js.ctc.qualify.QualifyApplication    : Started QualifyApplication in 3.416 seconds (JVM running for 4.667)
+2019-08-26 15:11:17.927  INFO 6056 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-26 15:11:17.927  INFO 6056 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-26 15:11:17.943  INFO 6056 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2019-08-26 15:12:35.971  INFO 1176 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 1176 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 15:12:35.987  INFO 1176 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 15:12:36.205  INFO 1176 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:12:36 CST 2019]; root of context hierarchy
+2019-08-26 15:12:36.689  WARN 1176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify.mapper.**]' package. Please check your configuration.
+2019-08-26 15:12:36.798  WARN 1176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify]' package. Please check your configuration.
+2019-08-26 15:12:37.687  INFO 1176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 15:12:37.703  INFO 1176 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 15:12:37.703  INFO 1176 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 15:12:37.718  INFO 1176 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 15:12:37.844  INFO 1176 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 15:12:37.844  INFO 1176 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1639 ms
+2019-08-26 15:12:37.875  INFO 1176 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 15:12:37.875  INFO 1176 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 15:12:37.985  INFO 1176 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Demo/index]}" onto public java.lang.String com.js.ctc.qualify.controller.Demo.index()
+2019-08-26 15:12:37.985  INFO 1176 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 15:12:37.985  INFO 1176 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 15:12:38.031  INFO 1176 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:12:38.031  INFO 1176 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:12:38.031  INFO 1176 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:12:38.063  INFO 1176 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:12:36 CST 2019]; root of context hierarchy
+2019-08-26 15:12:38.437  INFO 1176 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-08-26 15:12:38.687  INFO 1176 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-08-26 15:12:38.687  INFO 1176 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-08-26 15:12:38.702  INFO 1176 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-08-26 15:12:38.874  INFO 1176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-08-26 15:12:38.874  INFO 1176 --- [main] com.js.ctc.qualify.QualifyApplication    : Started QualifyApplication in 3.714 seconds (JVM running for 4.998)
+2019-08-26 15:12:40.141  INFO 1176 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-26 15:12:40.141  INFO 1176 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-26 15:12:40.157  INFO 1176 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2019-08-26 15:13:10.649  INFO 6660 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 6660 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 15:13:10.649  INFO 6660 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 15:13:10.758  INFO 6660 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:13:10 CST 2019]; root of context hierarchy
+2019-08-26 15:13:11.413  WARN 6660 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify.mapper.**]' package. Please check your configuration.
+2019-08-26 15:13:11.507  WARN 6660 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify]' package. Please check your configuration.
+2019-08-26 15:13:12.240  INFO 6660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 15:13:12.271  INFO 6660 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 15:13:12.271  INFO 6660 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 15:13:12.271  INFO 6660 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 15:13:12.380  INFO 6660 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 15:13:12.380  INFO 6660 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1622 ms
+2019-08-26 15:13:12.396  INFO 6660 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 15:13:12.396  INFO 6660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 15:13:12.489  INFO 6660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Demo/index]}" onto public java.lang.String com.js.ctc.qualify.controller.Demo.index()
+2019-08-26 15:13:12.505  INFO 6660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 15:13:12.505  INFO 6660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 15:13:12.521  INFO 6660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:13:12.521  INFO 6660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:13:12.536  INFO 6660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:13:12.567  INFO 6660 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:13:10 CST 2019]; root of context hierarchy
+2019-08-26 15:13:12.879  INFO 6660 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-08-26 15:13:13.129  INFO 6660 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-08-26 15:13:13.129  INFO 6660 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-08-26 15:13:13.145  INFO 6660 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-08-26 15:13:13.301  INFO 6660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-08-26 15:13:13.316  INFO 6660 --- [main] com.js.ctc.qualify.QualifyApplication    : Started QualifyApplication in 3.369 seconds (JVM running for 4.764)
+2019-08-26 15:13:16.251  INFO 6660 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-26 15:13:16.251  INFO 6660 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-26 15:13:16.268  INFO 6660 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2019-08-26 15:14:35.695  INFO 7824 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 7824 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 15:14:35.695  INFO 7824 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 15:14:35.773  INFO 7824 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:14:35 CST 2019]; root of context hierarchy
+2019-08-26 15:14:36.522  WARN 7824 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify.mapper.**]' package. Please check your configuration.
+2019-08-26 15:14:36.631  WARN 7824 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify]' package. Please check your configuration.
+2019-08-26 15:14:37.442  INFO 7824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 15:14:37.474  INFO 7824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 15:14:37.474  INFO 7824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 15:14:37.474  INFO 7824 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 15:14:37.583  INFO 7824 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 15:14:37.583  INFO 7824 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1810 ms
+2019-08-26 15:14:37.598  INFO 7824 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 15:14:37.614  INFO 7824 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 15:14:37.708  INFO 7824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Demo/index]}" onto public java.lang.String com.js.ctc.qualify.controller.Demo.index()
+2019-08-26 15:14:37.723  INFO 7824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 15:14:37.723  INFO 7824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 15:14:37.754  INFO 7824 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:14:37.754  INFO 7824 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:14:37.754  INFO 7824 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:14:37.801  INFO 7824 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:14:35 CST 2019]; root of context hierarchy
+2019-08-26 15:14:38.129  INFO 7824 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-08-26 15:14:38.394  INFO 7824 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-08-26 15:14:38.394  INFO 7824 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-08-26 15:14:38.394  INFO 7824 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-08-26 15:14:38.566  INFO 7824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-08-26 15:14:38.566  INFO 7824 --- [main] com.js.ctc.qualify.QualifyApplication    : Started QualifyApplication in 3.495 seconds (JVM running for 4.817)
+2019-08-26 15:14:40.173  INFO 7824 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-26 15:14:40.173  INFO 7824 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-26 15:14:40.189  INFO 7824 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2019-08-26 15:14:40.246 ERROR 7824 --- [http-nio-8099-exec-1] freemarker.runtime                       : Error executing FreeMarker template
+
+freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> basePath  [in template "index.ftl" at line 6, column 36]
+
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${basePath}  [in template "index.ftl" at line 6, column 34]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:467) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:389) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:358) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.Environment.visit(Environment.java:330) [freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.Environment.visit(Environment.java:336) [freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.Environment.process(Environment.java:309) [freemarker-2.3.28.jar:2.3.28]
+	at freemarker.template.Template.process(Template.java:384) [freemarker-2.3.28.jar:2.3.28]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:396) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:309) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:257) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:165) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) [spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2019-08-26 15:14:40.257 ERROR 7824 --- [http-nio-8099-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> basePath  [in template "index.ftl" at line 6, column 36]
+
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${basePath}  [in template "index.ftl" at line 6, column 34]
+----] with root cause
+
+freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> basePath  [in template "index.ftl" at line 6, column 36]
+
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${basePath}  [in template "index.ftl" at line 6, column 34]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:467) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:389) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:358) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.Environment.visit(Environment.java:330) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.Environment.visit(Environment.java:336) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.core.Environment.process(Environment.java:309) ~[freemarker-2.3.28.jar:2.3.28]
+	at freemarker.template.Template.process(Template.java:384) ~[freemarker-2.3.28.jar:2.3.28]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:396) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:309) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:257) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:165) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2019-08-26 15:14:40.280 ERROR 7824 --- [http-nio-8099-exec-1] w.s.e.ErrorMvcAutoConfiguration$SpelView : Cannot render error page for request [/Demo/index] and exception [The following has evaluated to null or missing:
+==> basePath  [in template "index.ftl" at line 6, column 36]
+
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${basePath}  [in template "index.ftl" at line 6, column 34]
+----] as the response has already been committed. As a result, the response may have the wrong status code.
+2019-08-26 15:14:56.154  INFO 8788 --- [main] com.js.ctc.qualify.QualifyApplication    : Starting QualifyApplication on hp-PC with PID 8788 (E:\docworkspace\qualify\target\classes started by hp in E:\docworkspace\qualify)
+2019-08-26 15:14:56.170  INFO 8788 --- [main] com.js.ctc.qualify.QualifyApplication    : No active profile set, falling back to default profiles: default
+2019-08-26 15:14:56.435  INFO 8788 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:14:56 CST 2019]; root of context hierarchy
+2019-08-26 15:14:56.903  WARN 8788 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify.mapper.**]' package. Please check your configuration.
+2019-08-26 15:14:57.012  WARN 8788 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.js.ctc.qualify]' package. Please check your configuration.
+2019-08-26 15:14:57.886  INFO 8788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)
+2019-08-26 15:14:57.901  INFO 8788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-26 15:14:57.901  INFO 8788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-08-26 15:14:57.917  INFO 8788 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\DEVTOOLS\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\hp\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\DEVTOOLS\JDK\bin;D:\DEVTOOLS\svn\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\apache-maven-3.0.5\bin;D:\DEVTOOLS\git\Git\cmd;D:\DEVTOOLS\node\;D:\apache-maven-3.0.5\bin;D:\apache-maven-3.0.5\bin;;D:\DEVTOOLS\Docker Toolbox;C:\Users\hp\AppData\Roaming\npm;.]
+2019-08-26 15:14:58.026  INFO 8788 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-26 15:14:58.026  INFO 8788 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1591 ms
+2019-08-26 15:14:58.073  INFO 8788 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-08-26 15:14:58.073  INFO 8788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-26 15:14:58.182  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Demo/index]}" onto public java.lang.String com.js.ctc.qualify.controller.Demo.index()
+2019-08-26 15:14:58.198  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-26 15:14:58.198  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-26 15:14:58.245  INFO 8788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:14:58.245  INFO 8788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:14:58.245  INFO 8788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-26 15:14:58.323  INFO 8788 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35e2d654: startup date [Mon Aug 26 15:14:56 CST 2019]; root of context hierarchy
+2019-08-26 15:14:58.681  INFO 8788 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-08-26 15:14:58.978  INFO 8788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-08-26 15:14:58.978  INFO 8788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-08-26 15:14:58.993  INFO 8788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-08-26 15:14:59.196  INFO 8788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
+2019-08-26 15:14:59.196  INFO 8788 --- [main] com.js.ctc.qualify.QualifyApplication    : Started QualifyApplication in 3.893 seconds (JVM running for 5.265)
+2019-08-26 15:15:12.424  INFO 8788 --- [http-nio-8099-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-26 15:15:12.425  INFO 8788 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-26 15:15:12.447  INFO 8788 --- [http-nio-8099-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: qualify
+  datasource:
+    driver-class-name:  oracle.jdbc.OracleDriver
+    url:  jdbc:oracle:thin:@132.224.198.26:38521/fast
+    username: c##fast
+    password: Fast*123
+    hikari:
+      #最小空闲连接数
+      minimum-idle: 5
+      #连接池最大连接数，默认是10
+      maximum-pool-size: 10
+      pool-name: hikariCP连接池
+      # 空闲连接存活最大时间，默认600000（10分钟）
+      idle-timeout: 600000
+      #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      max-lifetime: 600000
+      #数据库连接超时时间,默认30秒，即30000
+      connection-timeout: 30000
+  freemarker:
+    cache: false
+    suffix: .ftl
+    check-template-location: true
+server:
+  port: 8099
+mybatis:
+  mapper-locations: classpath:/mapper/**/*Mapper.xml
+logging:
+    level:
+      com.js.ctc.qualify.mapper: debug
+    file: log/dev.log
+    pattern: E:/docworkspace/log
