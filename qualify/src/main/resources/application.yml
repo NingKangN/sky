@@ -3,7 +3,7 @@ spring:
     name: qualify
   datasource:
     driver-class-name:  oracle.jdbc.OracleDriver
-    url:  jdbc:oracle:thin:@132.224.198.26:38521/fast
+    url:  #jdbc:oracle:thin:@132.224.198.26:38521/fast
     username: c##fast
     password: Fast*123
     hikari:
