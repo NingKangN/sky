@@ -17,4 +17,10 @@ public class LoginController {
     public String login(){
           return "login/login";
     }
+
+    @RequestMapping("/login-error")
+    public String loginError(){
+        return "login/login-error";
+    }
+
 }

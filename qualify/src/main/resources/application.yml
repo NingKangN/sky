@@ -30,4 +30,4 @@ logging:
     level:
       com.js.ctc.qualify.mapper: debug
     file: log/dev.log
-    pattern: E:/docworkspace/log
+    #pattern: E:/docworkspace/log

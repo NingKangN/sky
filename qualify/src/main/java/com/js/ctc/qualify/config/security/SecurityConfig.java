@@ -1,6 +1,8 @@
 package com.js.ctc.qualify.config.security;
 
+import com.js.ctc.qualify.Entity.security.MyPasswordEncoder;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -23,6 +25,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //super.configure(http);
         http
                 .formLogin().loginPage("/login").loginProcessingUrl("/login/form").failureUrl("/login-error").permitAll()  //表单登录，permitAll()表示这个不需要验证 登录页面，登录失败页面
+                .successForwardUrl("/index")
                 .and()
                 .authorizeRequests().anyRequest().authenticated()
                 .and()
@@ -32,5 +35,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         //解决静态资源被拦截的问题
         web.ignoring().antMatchers("/static/**");
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
+
+        auth
+                .inMemoryAuthentication().passwordEncoder(new MyPasswordEncoder())
+                .withUser("admin").password("123456").roles("USER")
+                .and()
+                .withUser("test").password("test123").roles("ADMIN");
     }
 }
